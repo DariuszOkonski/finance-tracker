@@ -12,8 +12,6 @@ export default function Signup() {
     e.preventDefault();
     
     signup(email, password, displayName)
-
-
   }
   
   return (
