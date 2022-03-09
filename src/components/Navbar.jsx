@@ -15,10 +15,12 @@ export default function Navbar() {
             
             {
               !user &&
-                (<>
-                  <li><Link to="/login">Login</Link></li>
-                  <li><Link to="/signup">Signup</Link></li>
-                </>)
+                (
+                  <>
+                    <li><Link to="/login">Login</Link></li>
+                    <li><Link to="/signup">Signup</Link></li>
+                  </>
+                )
             }
 
             { user &&
