@@ -1,4 +1,5 @@
 import styles from './Home.module.css';
+import TransactionForm from './TransactionForm';
 
 export default function Home() {
   return (
@@ -9,7 +10,7 @@ export default function Home() {
       </div>
 
       <div className={styles.sidebar}>
-        second
+        <TransactionForm />
       </div>
 
     </div>
