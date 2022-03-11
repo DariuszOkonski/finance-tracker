@@ -27,7 +27,7 @@ const firestoreReducer = (state, action) => {
         case 'DELETED_DOCUMENT':
             return {
                 isPending: false,
-                document: action.payload,
+                document: null,
                 success: true,
                 error: null,
             }
@@ -77,7 +77,7 @@ export const useFirestore = (collection) => {
 
         try {
             const deletedDocument = await ref.doc(id).delete();
-            dispatchIfNotCanceled({ type: 'DELETED_DOCUMENT', payload: deletedDocument })
+            dispatchIfNotCanceled({ type: 'DELETED_DOCUMENT' })
 
         } catch (err) {
             dispatchIfNotCanceled({ type: 'ERROR', payload: err.message })
